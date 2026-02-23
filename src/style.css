@@ -1,0 +1,66 @@
+:root {
+  --main-brown: #8d6e63;
+  --light-beige: rgba(239, 235, 233, 0.9); /* 약간 투명하게 */
+  --forest-green: #4e342e;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* 비디오 배경 스타일 */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 콘텐츠 뒤로 보내기 */
+  overflow: hidden;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 화면에 꽉 차게 채우기 */
+}
+
+/* 콘텐츠를 영상 위에 띄우기 */
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.3); /* 영상이 너무 밝으면 글자가 안 보이므로 살짝 어둡게 */
+}
+
+header {
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.card {
+  background: var(--light-beige); /* 반투명한 배경 */
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 30px;
+  text-align: center;
+  backdrop-filter: blur(5px); /* 배경 흐림 효과 */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.btn {
+  background-color: #d84315;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
