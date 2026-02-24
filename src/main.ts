@@ -3,11 +3,15 @@ import './style.css'
 const acornBtn = document.querySelector<HTMLButtonElement>('#acornBtn');
 const message = document.querySelector<HTMLParagraphElement>('#message');
 
+let clickCount = 0;
+
 if (acornBtn && message) {
   acornBtn.addEventListener('click', () => {
-    message.innerHTML = "볼이 빵빵해졌어요! 고마워요! 🐿️💨";
+    clickCount++;
+    message.textContent = `볼이 빵빵해졌어요! 고마워요! 🐿️💨\n누른 횟수: ${clickCount}번`;
     message.style.color = "#d84315";
     message.style.fontWeight = "bold";
     message.style.marginTop = "15px";
+    message.style.whiteSpace = "pre-line";
   });
 }
