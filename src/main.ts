@@ -1,4 +1,5 @@
-import './style.css'
+// src/main.ts
+import './style.css' // 만약 별도의 style.css 파일이 없다면 이 줄은 지우셔도 됩니다.
 
 const acornBtn = document.querySelector<HTMLButtonElement>('#acornBtn');
 const message = document.querySelector<HTMLParagraphElement>('#message');
